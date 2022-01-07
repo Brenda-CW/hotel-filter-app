@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FiltersList from "./Filters/FilterList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+//TODO: import the data model for your NAMED list of filters
+import { filterData } from "./data.js";
+
+const App = () => (
+  <div className="App">
+    {/* TODO: pass your data model as a prop to your FiltersList component */}
+    <FiltersList filters={filterData} />
+  </div>
+);
 
 export default App;
